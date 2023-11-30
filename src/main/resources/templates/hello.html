@@ -3,10 +3,11 @@
 
 <head>
     <title>Thymeleaf - Display Date and Time</title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}" />
 </head>
 
 <body>
-    <p th:text="'Server Date and Time is '+ ${theDate}"/>
+    <p th:text="'Server Date and Time is '+ ${theDate}" class="funny" />
 </body>
 
 </html>
