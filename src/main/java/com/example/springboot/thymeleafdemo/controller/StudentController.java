@@ -20,12 +20,16 @@ public class StudentController {
     @Value("${languages}")
     private List<String> languages;
 
+    @Value("${systems}")
+    private List<String> systems;
+
     @GetMapping("/studentForm")
     public String studentForm(Model model) {
         Student theStudent = new Student();
         model.addAttribute("student", theStudent);
         model.addAttribute("countries", countries);
         model.addAttribute("languages", languages);
+        model.addAttribute("systems", systems);
         return "studentForm";
     }
 
